@@ -1,7 +1,15 @@
-import { Section, Container, CountryInfo, Loader, Heading } from 'components';
+import {
+  Section,
+  Container,
+  CountryInfo,
+  Loader,
+  Heading,
+  CountryWrapper,
+} from 'components';
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchCountry } from 'service/country-service';
+import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 
 export const Country = () => {
   const location = useLocation();
@@ -36,7 +44,23 @@ export const Country = () => {
     <Section>
       <Container>
         {isLoading && <Loader />}
-        {error && <Heading>Oops, something wrong</Heading>}
+        {error && (
+          <>
+            <Link to={backLink}>
+              <CountryWrapper
+                style={{
+                  textAlign: 'center',
+                  margin: '0 auto',
+                  width: '100px',
+                }}
+              >
+                <ArrowBackTwoToneIcon />
+              </CountryWrapper>
+            </Link>
+            <Heading>Oops, something wrong</Heading>
+          </>
+        )}
+
         <CountryInfo
           flag={flag}
           capital={capital}
@@ -44,8 +68,8 @@ export const Country = () => {
           id={id}
           languages={languages}
           population={population}
+          backLink={backLink}
         />
-        <Link to={backLink}>Повернутися назад</Link>
       </Container>
     </Section>
   );

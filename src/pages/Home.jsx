@@ -1,6 +1,5 @@
 import { Container, CountryList, Heading, Loader, Section } from 'components';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { getCountries } from 'service/country-service';
 
 export const Home = () => {
