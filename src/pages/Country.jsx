@@ -23,8 +23,8 @@ export const Country = () => {
     const fetchData = async () => {
       try {
         setIsLoading(false);
-        const fetchCountr = await fetchCountry(countryId);
-        setCountry(fetchCountr);
+        const fetchCountry = await fetchCountry(countryId);
+        setCountry(fetchCountry);
       } catch (error) {
         setError(error);
       } finally {
