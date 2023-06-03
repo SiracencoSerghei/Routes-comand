@@ -13,7 +13,7 @@ export const Home = () => {
         setIsLoading(true);
         const result = await getCountries();
         setCountries(result);
-        console.log('result', result);
+        // console.log('result', result);
       } catch (error) {
         setError(error);
       } finally {

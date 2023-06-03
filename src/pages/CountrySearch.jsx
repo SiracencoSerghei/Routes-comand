@@ -36,7 +36,7 @@ export const CountrySearch = () => {
     };
     fetchCountries();
   }, [searchParams, query]);
-  console.log(searchParams.get('query'));
+  // console.log(searchParams.get('query'));
   return (
     <Section>
       <Container>
