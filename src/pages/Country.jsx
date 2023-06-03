@@ -18,6 +18,15 @@ export const Country = () => {
   const [country, setCountry] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const backBtnStyle = {
+    backgroundColor: 'white',
+    color: '#22a6b3',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    padding: '4px',
+    margin: '4px auto',
+    textAline: 'center',
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -70,6 +79,9 @@ export const Country = () => {
           population={population}
           backLink={backLink}
         />
+        <Link to={backLink}>
+        <button style={backBtnStyle}>Go BACK</button>
+      </Link>
       </Container>
     </Section>
   );
