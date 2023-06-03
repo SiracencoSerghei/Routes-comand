@@ -32,6 +32,7 @@ export const Select = styled.select`
   cursor: pointer;
 `;
 
+
 export const BtnSearch = styled.button`
   width: 50px;
   height: 50px;

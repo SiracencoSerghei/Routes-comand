@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   CountryWrapper,
   CountryDescription,
@@ -9,7 +8,6 @@ import {
   CountryDetail,
   Accent,
 } from './CountryInfo.styled';
-import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 
 export const CountryInfo = ({
   flag,
@@ -18,23 +16,9 @@ export const CountryInfo = ({
   id,
   languages = [],
   population,
-  backLink,
 }) => {
   return (
     <CountryWrapper>
-      <Link to={backLink}>
-        <CountryWrapper
-          style={{
-            textAlign: 'center',
-            margin: '0 auto',
-            width: '100px',
-            color: 'white',
-            backgroundColor: 'blue',
-          }}
-        >
-          <ArrowBackTwoToneIcon />
-        </CountryWrapper>
-      </Link>
       <Flag>
         <Image src={flag} alt={country} />
       </Flag>

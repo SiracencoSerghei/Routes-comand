@@ -2,6 +2,10 @@ import { FiSearch } from 'react-icons/fi';
 import { BtnSearch, Select, SearchFormStyled } from './SearchForm.styled';
 import { useState } from 'react';
 
+const selectColor = {
+  color: '#22a6b3',
+}
+
 export const SearchForm = ({ setSearch, setSearchParams }) => {
   const [query, setQuery] = useState('');
 
@@ -20,6 +24,7 @@ export const SearchForm = ({ setSearch, setSearchParams }) => {
         <FiSearch size="16px" />
       </BtnSearch>
       <Select
+        style={selectColor}
         aria-label="select"
         name="region"
         required

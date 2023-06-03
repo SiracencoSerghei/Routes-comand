@@ -4,10 +4,8 @@
   "private": true,
   "homepage": "https://siracencoserghei.github.io/routes-comand/",
   "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.3",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "axios": "^0.27.2",
     "modern-normalize": "^1.1.0",
     "nanoid": "^3.3.4",

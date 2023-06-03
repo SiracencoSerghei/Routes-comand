@@ -6,14 +6,12 @@ export const CountryWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   position: relative;
-
   margin-left: auto;
   margin-right: auto;
 `;
 
 export const CountryDescription = styled.div`
   padding: 100px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,13 +22,10 @@ export const CountryDescription = styled.div`
 export const Flag = styled.div`
   height: 90px;
   width: 140px;
-
   border-radius: 8px;
-
   z-index: 10;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   border: 4px solid #fff;
-
   position: absolute;
   left: -10%;
   top: -13%;
@@ -41,7 +36,6 @@ export const Flag = styled.div`
 
 export const Image = styled.img`
   /* width: 150px; */
-
   position: relative;
   border-radius: 8px;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);

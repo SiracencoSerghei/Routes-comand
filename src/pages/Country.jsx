@@ -1,15 +1,7 @@
-import {
-  Section,
-  Container,
-  CountryInfo,
-  Loader,
-  Heading,
-  CountryWrapper,
-} from 'components';
+import { Section, Container, CountryInfo, Loader, Heading } from 'components';
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchCountry } from 'service/country-service';
-import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 
 export const Country = () => {
   const location = useLocation();
@@ -31,8 +23,8 @@ export const Country = () => {
     const fetchData = async () => {
       try {
         setIsLoading(false);
-        const fetchCountry = await fetchCountry(countryId);
-        setCountry(fetchCountry);
+        const fetchCountr = await fetchCountry(countryId);
+        setCountry(fetchCountr);
       } catch (error) {
         setError(error);
       } finally {
@@ -53,22 +45,7 @@ export const Country = () => {
     <Section>
       <Container>
         {isLoading && <Loader />}
-        {error && (
-          <>
-            <Link to={backLink}>
-              <CountryWrapper
-                style={{
-                  textAlign: 'center',
-                  margin: '0 auto',
-                  width: '100px',
-                }}
-              >
-                <ArrowBackTwoToneIcon />
-              </CountryWrapper>
-            </Link>
-            <Heading>Oops, something wrong</Heading>
-          </>
-        )}
+        {error && <Heading>Oops, something wrong</Heading>}
 
         <CountryInfo
           flag={flag}
@@ -77,7 +54,6 @@ export const Country = () => {
           id={id}
           languages={languages}
           population={population}
-          backLink={backLink}
         />
         <Link to={backLink}>
         <button style={backBtnStyle}>Go BACK</button>
